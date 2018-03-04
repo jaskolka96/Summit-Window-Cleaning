@@ -1,43 +1,64 @@
 <!DOCTYPE html>
 <html>
 <head>
-<!--STYLESHEETS-->
-	 <script src="/reload/reload.js"></script>
+	<meta charet="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--STYLESHEET-->
 	<link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+
 	<title></title>
 </head>
 <body>
+
+	<!--JAVASCRIPT STYLE-->
+	  <script type="text/javascript" src="javascripts/script.js"></script>
 <!--LOGO -->
 <div id="logo">
 	<img src ="images/logo.png" alt="window, fascia, pressure, Gutter, cleaning, services">
 </div>
+<!--CONTACT INFO -->
+<div id='reach'>
+	<div class='reach-headbar'>
+		<h2>REACH US</h2>
+	 </div>
+		 <h1><img src='images/phone.png' alt='phone,cleaning'><u>Phone: +4124241525</u></h1>
+		 <h1><img src='images/email.png' alt='email,cleaning'><u>Email: Email@gmail.com</u></h1>
+	 </div>
 <!--Social Media Links (Right of the page)-->
 <div class="social-media-box">
-	<h1>Like our services?<br> Join Us now!</h1>
-	<a href='https://twitter.com/'>
-		<img src='images/medialogo1.png'alt="window, fascia, pressure, Gutter, cleaning, services">
-			</a>
-	<a href='https://facebook.com/'>
-		<img src='images/medialogo2.png'alt="window, fascia, pressure, Gutter, cleaning, services">
-			</a>
-	<a href='https://plus.google.com/'>
-		<img src='images/medialogo3.png'alt="window, fascia, pressure, Gutter, cleaning, services">
-			</a>
+	<div class='social-media-box-headbar'>
+		<h1>JOIN</h1>
+</div><h2>twitter</h2>
+<a href='https://twitter.com/'>
+	<img src='images/medialogo1.png'alt="window, fascia, pressure, Gutter, cleaning, services">
+		</a>
+<h2>instagram</h2>
+<a href='https://instagram.com/'>
+	<img src='images/medialogo2.png'alt="window, fascia, pressure, Gutter, cleaning, services">
+		</a>
+<h2>facebook</h2>
+<a href='https://facebook.com/'>
+	<img src='images/medialogo3.png'alt="window, fascia, pressure, Gutter, cleaning, services">
+		</a>
+<h2>google+</h2>
+		<a href='https://plus.google.com/'>
+			<img src='images/medialogo4.png'alt="window, fascia, pressure, Gutter, cleaning, services">
+				</a>
 </div>
-
 <!--NAVIGATION BAR -->
 	<nav>
+
 		<ul id="menu">
 	    <li class="home"id="home"><a href="/">Home</a></li>
 	    <li class="window"><a href="/window">Window </a></li>
 	    <li class="gutter"><a href="/gutter">Gutter </a></li>
 	    <li class="fascia"><a href="/fascia">Fascia </a></li>
 	    <li class="pressure"><a href="/pressure">Pressure </a></li>
-	    <li class="testimonials"><a href="/testimonials">Testiomonials</a></li>
+	    <li class="testimonials"><a href="/testimonials">Testimonials</a></li>
 	    <li class="charity"><a href="/charity">Charity</a></li>
 	    <li class="contact"><a href="/contact">Contact us</a></li>
 <!--searchbox-->
-	    <li class="nohover"><input type="text" placeholder="Search...."style="background-image: url(images/zoom.png); background-repeat: no-repeat;
+	    <li class="nohover"><input type="text" placeholder="Search..."style="background-image: url(images/zoom.png); background-repeat: no-repeat;
 	        background-size: 17px 17px; background-position: 92%;"></li></input>
 	  </ul>
 	</nav>
@@ -57,58 +78,97 @@
 <!--HOME CONTENT WRAPS-->
 	<div class="home-content">
 		<div id="headbar">
-			<h1>Welcome Message</h1>
+			<h1>NEWS</h1>
+			<p>Welcome to Summit Window Cleaning company!<br>(more text)</p>
 				</div>
 					</div>
 
 	<div class="home-content">
 		<div id="headbar">
-			<h1>About Us</h1>
+			<h1>WHAT WE DO</h1>
+			<p> We are a fully working cleaning company which deals with many types of cleaning facilities<br>(more text)</p>
 				</div>
 					</div>
 
   <div class="home-content">
 		<div id="headbar">
-			<h1>What We Do</h1>
+			<h1>ABOUT US</h1>
+			<p>Our professional team manages to keep your building look clean and estetic.<br>(more text)</p>
 				</div>
 					</div>
 
 <!--PICTUREBOXES -->
 		<div class="item">
 			<div id="transparency">
-				<img src='images/picture1.jpg'></img>
+			 <img src='images/picture1.jpg'></img></div>
 				<a href="Window.html"><h1>Window Cleaning</h1></a>
-					</div>
+			</div>
+
 						</div>
 
 		<div class="item">
 			<div id="transparency">
-				<img src='images/picture2.jpg'></img>
+				<img src='images/picture2.jpg'></img>	</div>
 				<a href="Gutter.html"><h1>Gutter Cleaning</h1></a>
-					</div>
+
 						</div>
 
 		<div class="item">
 			<div id="transparency">
-				<img src='images/picture3.jpg'></img>
+				<img src='images/picture3.jpg'></img>	</div>
 				<a href="Fascia.html"><h1>Fascia Cleaning</h1></a>
-					</div>
+
 						</div>
 
 		<div class="item">
 			<div id="transparency">
-				<img src='images/picture4.jpg'></img>
+				<img src='images/picture4.jpg'></img></div>
 				<a href="Pressure.html"><h1>Pressure Cleaning</h1></a>
-					</div>
+
 						</div>
 
 <!--TESTIMONIAL WRAP-->
+<div class='headbar-testimonial-home'>
+	<h1>TESTIMONIAL SHORT LIST</h1>
+				</div>
 				<div id='home-testominal'>
-				<div class='headbar-testimonial'>
-					<h1>Check out testimonials from other people!</h1>
-								</div>
+								<div id='extract-testimonial'>
+									<% for(var i=0; i< object.length; i++) {%>
 
+										<% if(i % 2!=0){%>
+											<div class ='background1'>
+										<% }
+										else {%>
+											<div class ='background2'>
+										<% }%>
+
+
+		   						<img src='images/user.png' class='user'><h1><b>
+										<%=object[i].u_name %></b></u> left a comment <i>"
+
+											<% if(object[i].u_comment.length >= 65){%>
+
+												<small><%=object[i].u_comment.substring(0,65)%></small>...<a href='/testimonials'><u>more</u></a>"
+
+											<% }
+											 else {%>
+
+												<small><%=object[i].u_comment%> "</small>
+
+											<% }%>
+
+
+										</i>rating us
+
+										<% for(var s=0; s< object[i].u_rating; s++) {%>
+
+												<img src='images/star.png' class='star'>
+
+												<% }%> <h1>(<%=object[i].u_rating%>) stars!</h1> <%}%>
 							</div>
+							</div>
+						</div>
+					</div>
 	</main>
 
 <!--FOOTER-->
@@ -149,7 +209,7 @@
 			<a href='https://twitter.com/'><img src='images/twitter.png'alt="window, fascia, pressure, Gutter, cleaning, services"></a>
 				<a href='https://facebook.com/'><img src='images/facebook.png'alt="window, fascia, pressure, Gutter, cleaning, services"></a>
 					<a href='https://plus.google.com/'><img src='images/google.png'alt="window, fascia, pressure, Gutter, cleaning, services"></a>
-						<p>@copyright All rights reserved to up775005 - Final Year Project (PJE40)</p>
+						<p>@copyright All rights reserved to up775005 - Final Year Project (PJE40) - Summit Window Cleaning</p>
 							</div>
 	</div>
 </footer>
