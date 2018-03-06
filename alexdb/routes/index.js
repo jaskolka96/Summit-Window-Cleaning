@@ -18,7 +18,7 @@ var connection = mysql.createConnection({
 /* GET home page. */
 router.get('/', function(req, res, next) {
 
-    connection.query('SELECT * FROM user ORDER BY u_id asc LIMIT 10', function (error, result, fields) {
+    connection.query('SELECT * FROM user ORDER BY u_id desc LIMIT 10', function (error, result, fields) {
       if (error) {
           throw error;
       } else {
@@ -160,7 +160,7 @@ router.post('/send',(req, res) => {
     from: 'summitqueryform@gmail.com',
     to: 'nivedasteam@gmail.com',/*<----------- ALEX'S EMAIL */
     subject:'Subject: ' +req.body.title,
-    text: 'username "'+req.body.username +'" has left a feedback on your website saying: '+req.body.myfield
+    text: 'Hello ! an username "'+req.body.username +'" has left a feedback on your website saying: "'+req.body.myfield +'" Contact user with email: '+req.body.email
     };
 
     transporter.sendMail(mailOptions, function(error, info){
