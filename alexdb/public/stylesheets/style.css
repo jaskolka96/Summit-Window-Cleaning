@@ -1,5 +1,5 @@
 body {
-    background-image: url("//images/bg2.jpeg");
+    background-image: url("/images/bg2.jpeg");
     background-attachment: fixed;
     background-repeat: repeat-y;
     background-size: cover;
@@ -10,7 +10,6 @@ body {
 }
 
 /* ---------------------phone-------------------- */
-
 
 #reach{
     background-color: rgba(32, 32, 32, 0.80);
@@ -222,9 +221,9 @@ input[type=text]:focus{
   justify-content: space-around;
   flex-wrap: wrap;
   align-self: center;
-
-
+  margin-bottom: 1vh;
 }
+
 /* ---------------------Picture boxes--------------------- */
 .item {
     width: 23%;
@@ -268,11 +267,6 @@ input[type=text]:focus{
     border-top-right-radius: 5px;
 
 }
-
-background: #159957;
-background: -webkit-linear-gradient(to bottom, #155799, #159957);
-background: linear-gradient(to bottom, #155799, #159957);
-
 
 .item:hover{
   background-color: rgba(0, 0, 0, 1);
@@ -603,51 +597,44 @@ footer {
   color:white;
 }
 /* ---------------------Cleaning Pages--------------------- */
-
-#service-left-container{
-  height: 0%;
-  width: 49%;
-  border: 3px solid;
+.cleaning-headbar{
+  background: #159957;
+  background: -webkit-linear-gradient(to bottom, #155799, #159957);
+  background: linear-gradient(to bottom, #155799, #159957);
+  width: 100%;
+  height: 20%;
+  position: relative;
+  border: 2px solid;
   border-color: #2f3036;
-  background-color:rgba(32, 32, 32, 0.90);
   border-radius: 4px;
+  color:white;
 }
-#service-left-container h1{
+
+.cleaning-headbar h1{
+  font-size: 1.5rem;
   color:white;
   text-align: center;
   font-family: sans-serif;
-  font-size: 24px;
+  font-weight: bold;
+  padding-top: 6px;
+  text-transform: uppercase;
 }
 
-#service-right-container{
-  height: 30%;
-  width: 49%;
-  border: 3px solid;
-  border-color: #2f3036;
-  background-color:rgba(32, 32, 32, 0.90);
-  border-radius: 4px;
-}
-
-#service-right-container h1{
-  color: white;
-  text-align: center;
-  font-family: sans-serif;
-  font-size: 24px;
-}
-.headbar-main{
-  background: linear-gradient(#1a79ff,#1a75ff,#1a75ff,#074bba,#074bba,#074bba);
+#cleaning-description{
   width: 100%;
-  height: 15%;
-  margin-top:-1em;
+  height: 100%;
+  margin-top: 1.5vh;
+  border-radius: 6px;
+  background-color:rgba(32, 32, 32, 0.90);
 }
 
-.headbar-main h1{
-  color: white;
-  text-align: center;
-  font-family: sans-serif;
-  font-size: 1.5em;
-  padding-top: 5px;
+#cleaning-gallery{
+  width: 100%;
+  height: 90%;
+  background-color:rgba(32, 32, 32, 0.90);
+  margin-bottom: 5vh;
 }
+
 #line3{
   border-left: 1px solid #1a79ff;
   margin-top: -3em;
@@ -655,27 +642,7 @@ footer {
   height: 50vh;
   margin-left: 50%;
 }
-  #gallery{
-    margin-top: 2em;
-    height: 30%;
-    width: 100%;
-    border: 3px solid;
-    border-color: #2f3036;
-    background-color:rgba(32, 32, 32, 0.90);
-    border-radius: 4px;
-    margin-bottom: 20em;
-}
-.headbar-gallery{
-  background: linear-gradient(#1a79ff,#1a75ff,#1a75ff,#074bba,#074bba,#074bba);
-  width: 100%;
-  height: 15%;
-  margin-top: -1.3em;
-}
-.headbar-gallery h1{
- color: white;
- text-align: center;
- font-family:sans-serif;
-}
+
 /* ---------------------Testimonials page--------------------- */
 #banner{
   height: 15%;
@@ -779,10 +746,11 @@ h3{
 }
 
 .contact-wrapper-headbar{
-  background: linear-gradient(#1a79ff,#1a75ff,#1a75ff,#074bba,#074bba,#074bba);
+  background: #159957;
+  background: -webkit-linear-gradient(to bottom, #155799, #159957);
+  background: linear-gradient(to bottom, #155799, #159957);
   width: 100%;
   height: 7%;
-  margin-top: -1.3em;
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
   position: relative;
@@ -957,7 +925,9 @@ h3{
 
 
 .SubmitQuery{
-  background: linear-gradient(#1a79ff,#1a75ff,#1a75ff,#074bba,#074bba,#074bba);
+  background: #159957;
+  background: -webkit-linear-gradient(to bottom, #155799, #159957);
+  background: linear-gradient(to bottom, #155799, #159957);
   border: 1px solid black;
   color: white;
   padding: 15px 15px;
@@ -987,7 +957,9 @@ h3{
   margin-bottom: 50vh;
 }
 .Submit-form-headbar{
-  background: linear-gradient(#1a79ff,#1a75ff,#1a75ff,#074bba,#074bba,#074bba);
+  background: #159957;
+  background: -webkit-linear-gradient(to bottom, #155799, #159957);
+  background: linear-gradient(to bottom, #155799, #159957);
   width: 100%;
   height: 13%;
   margin-top: -1.3em;

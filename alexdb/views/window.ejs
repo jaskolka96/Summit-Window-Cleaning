@@ -2,8 +2,12 @@
 <html>
 <head>
 <!--STYLESHEETS-->
-	<link rel="stylesheet" type="text/css" href="stylesheets/style.css">
-	<title></title>
+<link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<title></title> -->
 </head>
 <body>
 	<!--JAVASCRIPT STYLE-->
@@ -14,17 +18,11 @@
 </div>
 <!--CONTACT INFO -->
 <div id='reach'>
-	<div class='reach-headbar'>
-			<h2>REACH US</h2>
-	 </div>
 		 <h1><img src='images/phone.png' alt='phone,cleaning'><u>Phone: +4124241525</u></h1>
 		 <h1><img src='images/email.png' alt='email,cleaning'><u>Email: Email@gmail.com</u></h1>
 	 </div>
 <!--Social Media Links (Right of the page)-->
 <div class="social-media-box">
-	<div class='social-media-box-headbar'>
-		<h1>JOIN</h1>
-</div>
 <h2>twitter</h2>
 <a href='https://twitter.com/'>
 	<img src='images/medialogo1.png'alt="window, fascia, pressure, Gutter, cleaning, services">
@@ -58,70 +56,69 @@
 	        background-size: 17px 17px; background-position: 92%;"></li></input>
 	  </ul>
 	</nav>
+
+
+
 <!--MAIN WRAP-->
 	<main id="home-wrapper">
-
-				<div class='headbar-main'>
-					<h1> WINDOW CLEANING SERVICE</h1>
+		<div id='cleaning-description'>
+		<div class='cleaning-headbar'>
+			<h1>Window Cleaning Service</h1>
 				</div>
-
-				<div id='service-left-container'>
-					<h1>Service Description</h1>
-						</div>
-
-				<div id='service-right-container'>
-					<h1>Additional Information</h1>
-
-						</div>
-
-
-					<div id='gallery'>
-						<div class='headbar-gallery'>
-							<h1> GALLERY </h1>
-						</div>
-					</div>
+				<h1>hello</h1>
+		<% for(var i=0; i< object.length; i++) {%>
+		<h2>Average Rating: <%=object[i].avgWindow%></h2>
+		<% } %>
+</div>
+	<div id='cleaning-gallery'>
+		<div class='cleaning-headbar'>
+			<h1>Gallery</h1>
+	</div>
 	</main>
-<!--FOOTER-->
-	<footer>
-		<div id='top-footer'>
+
+
+
+	<!--FOOTER-->
+		<footer>
+
+			<div id='top-footer'>
 			<section>
-				<h1>MENU</h1>
-					<a href="Home.html">Home</a>
-						</section>
-		<section>
-			<h1>SERVICES</h1>
-				<a href="Window.html">Window</a>
-					<a href="Gutter.html">Gutter</a>
-						<a href="Fascia.html">Fascia</a>
-							<a href="Pressure.html">Pressure</a>
+				<h1>SERVICES</h1>
+					<a href="Window.html">Window</a>
+						<a href="Gutter.html">Gutter</a>
+							<a href="Fascia.html">Fascia</a>
+								<a href="Pressure.html">Pressure</a>
+									</section>
+			<section>
+				<h1>CONTACT</h1>
+					<a href="Testimonials.html">Testimonials</a>
+						<a href="Charity.html">Charity</a>
+							<a href="Contact.html">Contact us</a>
 								</section>
+
+			<section>
+				<h1>MISCELLANEOUS</h1>
+					<a href="Testimonials.html">Terms And Services</a>
+					<a href="Testimonials.html">Contact Information</a>
+					</section>
+					<section>
+						<h1>MENU</h1>
+							<a href="Home.html">Home</a>
+								</section>
+		</div>
 		<section>
-			<h1>CONTACT</h1>
-				<a href="Testimonials.html">Testimonials</a>
-					<a href="Charity.html">Charity</a>
-						<a href="Contact.html">Contact us</a>
-							</section>
+			<div id='bottom-footer'>
+				<div id='social-icons'>
+					<br>
+	<!--Social Media Links (bottom footer)-->
+				<a href='https://twitter.com/'><img src='images/twitter.png'alt="window, fascia, pressure, Gutter, cleaning, services"></a>
+					<a href='https://facebook.com/'><img src='images/facebook.png'alt="window, fascia, pressure, Gutter, cleaning, services"></a>
+						<a href='https://plus.google.com/'><img src='images/google.png'alt="window, fascia, pressure, Gutter, cleaning, services"></a>
+							<p>@copyright All rights reserved to up775005 - Final Year Project (PJE40) - Summit Window Cleaning</p>
+								</div>
 
-		<section>
-			<h1>MISCELLANEOUS</h1>
-				<a href="Testimonials.html">Terms And Services</a>
-				<a href="Testimonials.html">Contact Information</a>
-				</section>
-	</div>
-		<div id='bottom-footer'>
-			<div id='social-icons'>
-				<div id='line'>
-					</div>
+	</section>
+	</footer>
 
-				<br>
-<!--Social Media Links (bottom footer)-->
-			<a href='https://twitter.com/'><img src='images/twitter.png'alt="window, fascia, pressure, Gutter, cleaning, services"></a>
-				<a href='https://facebook.com/'><img src='images/facebook.png'alt="window, fascia, pressure, Gutter, cleaning, services"></a>
-					<a href='https://plus.google.com/'><img src='images/google.png'alt="window, fascia, pressure, Gutter, cleaning, services"></a>
-						<p>@copyright All rights reserved to up775005 - Final Year Project (PJE40)</p>
-							</div>
-	</div>
-</footer>
-
-</body>
-</html>
+	</body>
+	</html>
