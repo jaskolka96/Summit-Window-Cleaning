@@ -44,7 +44,7 @@
 	<nav>
 		<ul id="menu">
 	    <li class="home"><a href="/">Home</a></li>
-	    <li class="window"id="window"><a href="/window">Window </a></li>
+	    <li class="window"id="contact"><a href="/window">Window </a></li>
 	    <li class="gutter"><a href="/gutter">Gutter </a></li>
 	    <li class="fascia"><a href="/fascia">Fascia </a></li>
 	    <li class="pressure"><a href="/pressure">Pressure </a></li>
@@ -56,69 +56,79 @@
 	        background-size: 17px 17px; background-position: 92%;"></li></input>
 	  </ul>
 	</nav>
+		<main id="home-wrapper">
+<!--LEFT WRAPPER!--------------------->
 
-
-
-<!--MAIN WRAP-->
-	<main id="home-wrapper">
-		<div id='cleaning-description'>
+<div id='cleaning-description'>
 		<div class='cleaning-headbar'>
 			<h1>Window Cleaning Service</h1>
-				</div>
-				<h1>hello</h1>
-		<% for(var i=0; i< object.length; i++) {%>
-		<h2>Average Rating: <%=object[i].avgWindow%></h2>
-		<% } %>
 </div>
-	<div id='cleaning-gallery'>
-		<div class='cleaning-headbar'>
-			<h1>Gallery</h1>
+<div id='cleaning-left-container'>
+<h3>Service Description</h3>
+<p> extsample extsample<br> extsample extsample extsample extsample extsample extsample extsample extsample extsample<br> extsample<br>extsample extsample extsample<br> extsample extsample extsample extsample extsample extsample textsampletextsample textsample textsample text</p>
+
+<h5>Service <b>PRICE</b> starts from: <b>£20</b></h5>
+</div>
+
+<div id='cleaning-right-container'>
+<h4>Additional Information</h4>
+<p> extsample extsample<br> extsample extsample extsample extsample extsample extsample extsample extsample extsample<br> extsample<br>extsample extsample extsample<br> extsample extsample extsample extsample extsample extsample textsampletextsample textsample textsample text</p>
+<% for(var i=0; i< object.length; i++) {%>
+<h2>Average Rating: <b><%=object[i].avgWindow%></b> out of 5 stars!</h2>
+<% } %>
+</div>
+<br>
+<div id='cleaning-gallery'>
+	<div class='gallery-headbar'>
+		<h1>Window Gallery</h1>
 	</div>
-	</main>
+</div>
+</div>
+</main>
 
 
 
-	<!--FOOTER-->
-		<footer>
+<!--FOOTER-->
+	<footer>
 
-			<div id='top-footer'>
-			<section>
-				<h1>SERVICES</h1>
-					<a href="Window.html">Window</a>
-						<a href="Gutter.html">Gutter</a>
-							<a href="Fascia.html">Fascia</a>
-								<a href="Pressure.html">Pressure</a>
-									</section>
-			<section>
-				<h1>CONTACT</h1>
-					<a href="Testimonials.html">Testimonials</a>
-						<a href="Charity.html">Charity</a>
-							<a href="Contact.html">Contact us</a>
-								</section>
-
-			<section>
-				<h1>MISCELLANEOUS</h1>
-					<a href="Testimonials.html">Terms And Services</a>
-					<a href="Testimonials.html">Contact Information</a>
-					</section>
-					<section>
-						<h1>MENU</h1>
-							<a href="Home.html">Home</a>
-								</section>
-		</div>
+		<div id='top-footer'>
 		<section>
-			<div id='bottom-footer'>
-				<div id='social-icons'>
-					<br>
-	<!--Social Media Links (bottom footer)-->
-				<a href='https://twitter.com/'><img src='images/twitter.png'alt="window, fascia, pressure, Gutter, cleaning, services"></a>
-					<a href='https://facebook.com/'><img src='images/facebook.png'alt="window, fascia, pressure, Gutter, cleaning, services"></a>
-						<a href='https://plus.google.com/'><img src='images/google.png'alt="window, fascia, pressure, Gutter, cleaning, services"></a>
-							<p>@copyright All rights reserved to up775005 - Final Year Project (PJE40) - Summit Window Cleaning</p>
-								</div>
+			<h1>SERVICES</h1>
+				<a href="Window.html">Window</a>
+					<a href="Gutter.html">Gutter</a>
+						<a href="Fascia.html">Fascia</a>
+							<a href="Pressure.html">Pressure</a>
+								</section>
+		<section>
+			<h1>CONTACT</h1>
+				<a href="Testimonials.html">Testimonials</a>
+					<a href="Charity.html">Charity</a>
+						<a href="Contact.html">Contact us</a>
+							</section>
 
-	</section>
-	</footer>
+		<section>
+			<h1>MISCELLANEOUS</h1>
+				<a href="Testimonials.html">Terms And Services</a>
+				<a href="Testimonials.html">Contact Information</a>
+				</section>
+				<section>
+					<h1>MENU</h1>
+						<a href="Home.html">Home</a>
+							</section>
+	</div>
+	<section>
+		<div id='bottom-footer'>
+			<div id='social-icons'>
+				<br>
+<!--Social Media Links (bottom footer)-->
+			<a href='https://twitter.com/'><img src='images/twitter.png'alt="window, fascia, pressure, Gutter, cleaning, services"></a>
+				<a href='https://facebook.com/'><img src='images/facebook.png'alt="window, fascia, pressure, Gutter, cleaning, services"></a>
+					<a href='https://plus.google.com/'><img src='images/google.png'alt="window, fascia, pressure, Gutter, cleaning, services"></a>
+						<p>@copyright All rights reserved to up775005 - Final Year Project (PJE40) - Summit Window Cleaning</p>
+							</div>
 
-	</body>
-	</html>
+</section>
+</footer>
+
+</body>
+</html>

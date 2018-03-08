@@ -4,10 +4,10 @@
 <!--STYLESHEETS-->
 <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-	<title></title>
+	<title></title> -->
 </head>
 <body>
 	<!--JAVASCRIPT STYLE-->
@@ -45,7 +45,7 @@
 		<ul id="menu">
 	    <li class="home"><a href="/">Home</a></li>
 	    <li class="window"><a href="/window">Window </a></li>
-	    <li class="gutter"id="gutter"><a href="/gutter">Gutter </a></li>
+	    <li class="gutter"id="contact"><a href="/gutter">Gutter </a></li>
 	    <li class="fascia"><a href="/fascia">Fascia </a></li>
 	    <li class="pressure"><a href="/pressure">Pressure </a></li>
 	    <li class="testimonials"><a href="/testimonials">Testimonials</a></li>
@@ -56,18 +56,38 @@
 	        background-size: 17px 17px; background-position: 92%;"></li></input>
 	  </ul>
 	</nav>
+		<main id="home-wrapper">
+<!--LEFT WRAPPER!--------------------->
 
-	<main id="home-wrapper">
+<div id='cleaning-description'>
+		<div class='cleaning-headbar'>
+			<h1>Gutter Cleaning Service</h1>
+</div>
+<div id='cleaning-left-container'>
+<h3>Service Description</h3>
+<p> extsample extsample<br> extsample extsample extsample extsample extsample extsample extsample extsample extsample<br> extsample<br>extsample extsample extsample<br> extsample extsample extsample extsample extsample extsample textsampletextsample textsample textsample text</p>
 
+<h5>Service <b>PRICE</b> starts from: <b>£20</b></h5>
+</div>
 
-<!--MAIN WRAP-->
-<div id='main-wrap'>
-
+<div id='cleaning-right-container'>
+<h4>Additional Information</h4>
+<p> extsample extsample<br> extsample extsample extsample extsample extsample extsample extsample extsample extsample<br> extsample<br>extsample extsample extsample<br> extsample extsample extsample extsample extsample extsample textsampletextsample textsample textsample text</p>
 <% for(var i=0; i< object.length; i++) {%>
-<h2>Average Rating: <%=object[i].avgGutter%></h2>
+<h2>Average Rating: <b><%=object[i].avgGutter%></b> out of 5 stars!</h2>
 <% } %>
-
+</div>
+<br>
+<div id='cleaning-gallery'>
+	<div class='gallery-headbar'>
+		<h1>Gutter Gallery</h1>
+	</div>
+</div>
+</div>
 </main>
+
+
+
 <!--FOOTER-->
 	<footer>
 

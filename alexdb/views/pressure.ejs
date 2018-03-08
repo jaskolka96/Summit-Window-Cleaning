@@ -4,10 +4,10 @@
 <!--STYLESHEETS-->
 <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-	<title></title>
+	<title></title> -->
 </head>
 <body>
 	<!--JAVASCRIPT STYLE-->
@@ -47,7 +47,7 @@
 	    <li class="window"><a href="/window">Window </a></li>
 	    <li class="gutter"><a href="/gutter">Gutter </a></li>
 	    <li class="fascia"><a href="/fascia">Fascia </a></li>
-	    <li class="pressure"id="pressure"><a href="/pressure">Pressure </a></li>
+	    <li class="pressure"id="contact"><a href="/pressure">Pressure </a></li>
 	    <li class="testimonials"><a href="/testimonials">Testimonials</a></li>
 	    <li class="charity"><a href="/charity">Charity</a></li>
 	    <li class="contact"><a href="/contact">Contact us</a></li>
@@ -56,53 +56,143 @@
 	        background-size: 17px 17px; background-position: 92%;"></li></input>
 	  </ul>
 	</nav>
+		<main id="home-wrapper">
+<!--LEFT WRAPPER!--------------------->
 
-	<main id="home-wrapper">
-		<% for(var i=0; i< object.length; i++) {%>
-		<h2>Average Rating: <%=object[i].avgPressure%></h2>
-		<% } %>
-		</main>
-		<!--FOOTER-->
-			<footer>
+<div id='cleaning-description'>
+		<div class='cleaning-headbar'>
+			<h1>Pressure Cleaning Service</h1>
+</div>
+<div id='cleaning-left-container'>
+<h3>Service Description</h3>
+<p> extsample extsample<br> extsample extsample extsample extsample extsample extsample extsample extsample extsample<br> extsample<br>extsample extsample extsample<br> extsample extsample extsample extsample extsample extsample textsampletextsample textsample textsample text</p>
 
-				<div id='top-footer'>
+<h5>Service <b>PRICE</b> starts from: <b>£20</b></h5>
+</div>
+
+<div id='cleaning-right-container'>
+<h4>Additional Information</h4>
+<p> extsample extsample<br> extsample extsample extsample extsample extsample extsample extsample extsample extsample<br> extsample<br>extsample extsample extsample<br> extsample extsample extsample extsample extsample extsample textsampletextsample textsample textsample text</p>
+<% for(var i=0; i< object.length; i++) {%>
+<h2>Average Rating: <b><%=object[i].avgPressure%></b> out of 5 stars!</h2>
+<% } %>
+</div>
+<br>
+<div id='cleaning-gallery'>
+	<div class='gallery-headbar'>
+		<h1>Pressure Gallery</h1>
+	</div>
+	<!-- Container for the image gallery -->
+<div class="container">
+ <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+ <!-- Full-width images with number text -->
+ <div class="mySlides">
+	 <div class="numbertext">1 / 6</div>
+		 <img src="images/pressure-img1.jpg" style="width:100%">
+ </div>
+
+ <div class="mySlides">
+	 <div class="numbertext">2 / 6</div>
+		 <img src="images/pressure-img2.jpg"qq style="width:100%">
+ </div>
+
+ <div class="mySlides">
+	 <div class="numbertext">3 / 6</div>
+		 <img src="images/pressure-img3.jpg" style="width:100%">
+ </div>
+
+ <div class="mySlides">
+	 <div class="numbertext">4 / 6</div>
+		 <img src="images/pressure-img4.jpg" style="width:100%">
+ </div>
+
+ <div class="mySlides">
+	 <div class="numbertext">5 / 6</div>
+		 <img src="images/pressure-img5.jpg" style="width:100%">
+ </div>
+
+ <div class="mySlides">
+	 <div class="numbertext">6 / 6</div>
+		 <img src="images/pressure-img6.jpg" style="width:100%">
+ </div>
+
+ <!-- Next and previous buttons -->
+ <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+ <!-- Image text -->
+ <div class="caption-container">
+	 <p id="caption"></p>
+ </div>
+
+ <!-- Thumbnail images -->
+ <div class="row">
+	 <div class="column">
+		 <img class="demo cursor" src="img_woods.jpg" style="width:100%" onclick="currentSlide(1)" alt="">
+	 </div>
+	 <div class="column">
+		 <img class="demo cursor" src="img_fjords.jpg" style="width:100%" onclick="currentSlide(2)" alt="">
+	 </div>
+	 <div class="column">
+		 <img class="demo cursor" src="img_mountains.jpg" style="width:100%" onclick="currentSlide(3)" alt="">
+	 </div>
+	 <div class="column">
+		 <img class="demo cursor" src="img_lights.jpg" style="width:100%" onclick="currentSlide(4)" alt="">
+	 </div>
+	 <div class="column">
+		 <img class="demo cursor" src="img_nature.jpg" style="width:100%" onclick="currentSlide(5)" alt="">
+	 </div>
+	 <div class="column">
+		 <img class="demo cursor" src="img_snow.jpg" style="width:100%" onclick="currentSlide(6)" alt="">
+	 </div>
+ </div>
+</div>
+</div>
+</div>
+</main>
+
+
+
+<!--FOOTER-->
+	<footer>
+
+		<div id='top-footer'>
+		<section>
+			<h1>SERVICES</h1>
+				<a href="Window.html">Window</a>
+					<a href="Gutter.html">Gutter</a>
+						<a href="Fascia.html">Fascia</a>
+							<a href="Pressure.html">Pressure</a>
+								</section>
+		<section>
+			<h1>CONTACT</h1>
+				<a href="Testimonials.html">Testimonials</a>
+					<a href="Charity.html">Charity</a>
+						<a href="Contact.html">Contact us</a>
+							</section>
+
+		<section>
+			<h1>MISCELLANEOUS</h1>
+				<a href="Testimonials.html">Terms And Services</a>
+				<a href="Testimonials.html">Contact Information</a>
+				</section>
 				<section>
-					<h1>SERVICES</h1>
-						<a href="Window.html">Window</a>
-							<a href="Gutter.html">Gutter</a>
-								<a href="Fascia.html">Fascia</a>
-									<a href="Pressure.html">Pressure</a>
-										</section>
-				<section>
-					<h1>CONTACT</h1>
-						<a href="Testimonials.html">Testimonials</a>
-							<a href="Charity.html">Charity</a>
-								<a href="Contact.html">Contact us</a>
-									</section>
+					<h1>MENU</h1>
+						<a href="Home.html">Home</a>
+							</section>
+	</div>
+	<section>
+		<div id='bottom-footer'>
+			<div id='social-icons'>
+				<br>
+<!--Social Media Links (bottom footer)-->
+			<a href='https://twitter.com/'><img src='images/twitter.png'alt="window, fascia, pressure, Gutter, cleaning, services"></a>
+				<a href='https://facebook.com/'><img src='images/facebook.png'alt="window, fascia, pressure, Gutter, cleaning, services"></a>
+					<a href='https://plus.google.com/'><img src='images/google.png'alt="window, fascia, pressure, Gutter, cleaning, services"></a>
+						<p>@copyright All rights reserved to up775005 - Final Year Project (PJE40) - Summit Window Cleaning</p>
+							</div>
 
-				<section>
-					<h1>MISCELLANEOUS</h1>
-						<a href="Testimonials.html">Terms And Services</a>
-						<a href="Testimonials.html">Contact Information</a>
-						</section>
-						<section>
-							<h1>MENU</h1>
-								<a href="Home.html">Home</a>
-									</section>
-			</div>
-			<section>
-				<div id='bottom-footer'>
-					<div id='social-icons'>
-						<br>
-		<!--Social Media Links (bottom footer)-->
-					<a href='https://twitter.com/'><img src='images/twitter.png'alt="window, fascia, pressure, Gutter, cleaning, services"></a>
-						<a href='https://facebook.com/'><img src='images/facebook.png'alt="window, fascia, pressure, Gutter, cleaning, services"></a>
-							<a href='https://plus.google.com/'><img src='images/google.png'alt="window, fascia, pressure, Gutter, cleaning, services"></a>
-								<p>@copyright All rights reserved to up775005 - Final Year Project (PJE40) - Summit Window Cleaning</p>
-									</div>
+</section>
+</footer>
 
-		</section>
-		</footer>
-
-		</body>
-		</html>
+</body>
+</html>

@@ -1,5 +1,5 @@
 body {
-    background-image: url("/images/bg2.jpeg");
+    background-image: url("images/bg2.jpeg");
     background-attachment: fixed;
     background-repeat: repeat-y;
     background-size: cover;
@@ -602,7 +602,7 @@ footer {
   background: -webkit-linear-gradient(to bottom, #155799, #159957);
   background: linear-gradient(to bottom, #155799, #159957);
   width: 100%;
-  height: 20%;
+  height: 9%;
   position: relative;
   border: 2px solid;
   border-color: #2f3036;
@@ -621,28 +621,229 @@ footer {
 }
 
 #cleaning-description{
+  height: 60%;
   width: 100%;
-  height: 100%;
-  margin-top: 1.5vh;
-  border-radius: 6px;
+  border: 2px solid;
+  border-color: #2f3036;
+  color:white;
+  margin-top: 1em;
   background-color:rgba(32, 32, 32, 0.90);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
+#cleaning-description h1{
+  font-family: sans-serif;
+  color:white;
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+#cleaning-description h2{
+  color:white;
+  font-size: 1.5rem;
+
+}
+
+#cleaning-description b{
+  color:  #159957;
+}
+
+#cleaning-description p{
+  margin: 2em;
+  font-family: sans-serif;
+  color:white;
+  font-size: 0.9em;
+}
+#cleaning-description h3{
+  color:#159957;
+  font-family: sans-serif;
+  font-size: 1.5rem;
+  margin-top: -1vh;
+  font-weight: bold;
+}
+
+#cleaning-description h4{
+  color:#159957;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+#cleaning-description h5{
+  color:#159957;
+  font-family: sans-serif;
+  font-family:sans-serif;
+  margin-bottom: 5vh;
+}
+
+#cleaning-left-container{
+  width:50%;
+  height: 85%;
+  margin-top: 1vh;
+  text-align: center;
+  border-right: 2px solid #155799;
+}
+#cleaning-left-container:hover, #cleaning-right-container:hover {
+  -webkit-filter: brightness(90%);
+}
+#cleaning-right-container{
+  width:50%;
+  height: 85%;
+  margin-top: 1vh;
+  text-align: center;
+}
+
+/* GALLERY -------------------------------------------------- */
 #cleaning-gallery{
   width: 100%;
-  height: 90%;
+  height: 50%;
   background-color:rgba(32, 32, 32, 0.90);
-  margin-bottom: 5vh;
+  margin-top: 5vh;
+  margin-bottom: 20vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+    border-radius: 6px;
+}
+.gallery-headbar{
+  background: #159957;
+  background: -webkit-linear-gradient(to bottom, #155799, #159957);
+  background: linear-gradient(to bottom, #155799, #159957);
+  width: 100%;
+  height: 20%;
+  position: relative;
+  border: 2px solid;
+
+  border-color: #2f3036;
+  border-radius: 4px;
+  color:white;
+  padding: 5px;
 }
 
 #line3{
   border-left: 1px solid #1a79ff;
-  margin-top: -3em;
-  margin-bottom: 1em;
-  height: 50vh;
+  margin-top: -6em;
+  margin-bottom: -2em;
+  height: 30vh;
   margin-left: 50%;
 }
+/*w3 */
 
+* {
+  box-sizing: border-box;
+}
+
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+  top:13%;
+  width: 100%;
+  height: 100%;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: inline-flex;
+  left:-2px;
+  width:16%;
+  height: 60%;
+  position: relative;
+  align-self: center;
+  border-top: 2px solid #155799;
+  border-radius: 5px;
+  margin-left: 4px;
+}
+
+.mySlides img{
+  width: 70%;
+  height: 70%;
+  border-radius: 5px;
+}
+.mySlides img:hover{
+  -webkit-filter: brightness(50%);
+}
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: -20px;
+  margin-top: -40px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right:-2%;
+  border-radius: 3px 0 0 3px;
+}
+.prev {
+  left:-2%;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color:  white;
+  font-weight: bold;
+  font-size: 13px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  margin-top: -3vh;
+  text-align: center;
+  background-color: #159957;
+  border-radius: 100px;
+  width: 100%;
+  height: 1%;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
 /* ---------------------Testimonials page--------------------- */
 #banner{
   height: 15%;
