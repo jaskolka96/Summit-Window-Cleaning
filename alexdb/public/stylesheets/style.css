@@ -1,5 +1,5 @@
 body {
-    background-image: url("/images/bg2.jpeg");
+    background-image: url("//images/bg2.jpeg");
     background-attachment: fixed;
     background-repeat: repeat-y;
     background-size: cover;
@@ -343,7 +343,7 @@ input[type=text]:focus{
   align-self: center;
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;
-  border-left: 3px solid #1a79ff;
+
 }
 
 
@@ -967,14 +967,14 @@ h3{
   color:white;
   font-size: 0.9em;
 }
-
+/*
 #myfield2:hover, #usernameField:hover, #emailField:hover{
   -webkit-filter: brightness(80%);
 }
 
 #myfield1:hover, #selectRating:hover, #selectService:hover{
   -webkit-filter: brightness(80%);
-}
+} */
 
 #CharCountLabel1{
   font-family: sans-serif;

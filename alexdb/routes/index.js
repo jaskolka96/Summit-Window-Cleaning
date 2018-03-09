@@ -14,6 +14,35 @@ var connection = mysql.createConnection({
   database : 'alexdb',
   port     : '3306'
 });
+
+router.get('/commentApproved', function(req, res, next) {
+  console.log(req.query.id)
+
+  if (req.query.secret){
+    if (req.query.secret.length == 15){
+      connection.query('UPDATE user SET u_post ="true" WHERE u_id ='+req.query.id, function (error, result, fields) {
+        if (error) {
+          throw error;
+        } else {
+          console.log('-------feedback inserted----------')
+          res.redirect('/submissionForm');
+          }
+        });
+    }
+  }
+  });
+
+function generateSecret(){
+  var text = "";
+  var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+  for (var i = 0; i < 15; i++)
+  text += possible.charAt(Math.floor(Math.random() * possible.length));
+return text;
+}
+
+
+
   console.log('MySQL Connected');
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -143,6 +172,7 @@ router.get('/contact', function(req, res, next) {
 
   res.render('contact', {
 });
+});
 
 router.post('/send',(req, res) => {
     console.log(req.body);
@@ -168,11 +198,12 @@ router.post('/send',(req, res) => {
       console.log(error);
     } else {
       console.log('-----EMAIL SENT------' + info.response);
-      res.redirect('/submissionForm');
     }
     });
 
 });
+
+
 router.post('/sendtestimonial',(req, res) => {
     console.log(req.body);
 
@@ -206,7 +237,7 @@ router.post('/sendtestimonial',(req, res) => {
               from: 'summitqueryform@gmail.com',
               to: 'nivedasteam@gmail.com',/*<----------- ALEX'S EMAIL */
               subject:'Subject: Testimonial insert Request',
-              html: 'Hello ! an username <b>"'+post.u_name+'"</b> has left a feedback on your website saying: <b>"'+post.u_comment+'</b> " Rating: <b>'+post.u_rating+'</b> Stars For <b>'+post.u_service+'</b> Service. If you wish to accept it, click on link: '+ 'http://localhost:8080/submissionForm'+userID
+              html: 'Hello ! an username <b>"'+post.u_name+'"</b> has left a feedback on your website saying: <b>"'+post.u_comment+'</b> " Rating: <b>'+post.u_rating+'</b> Stars For <b>'+post.u_service+'</b> Service. If you wish to accept it, click on link: '+ 'http://localhost:8080/commentApproved?id='+userID+'&secret='+generateSecret()
             };
 
             transporter.sendMail(mail,(error, info) => {
@@ -216,23 +247,10 @@ router.post('/sendtestimonial',(req, res) => {
               console.log('message sent..'+info)
               res.redirect('/submissionForm');
             });
-
-            router.post('http://localhost:8080/submissionForm'+userID, function(req, res, next) {
-
-
-              connection.query('UPDATE user SET u_post ="true" WHERE u_id = userID', function (error, result, fields) {
-                if (error) {
-                  throw error;
-                } else {
-                  console.log('-------feedback inserted----------')
-                  res.redirect('/submissionForm');
-                  }
-                });
-              });
             }
           });
         });
-      });
+
 
 router.get('/submissionForm', function(req, res, next) {
 
