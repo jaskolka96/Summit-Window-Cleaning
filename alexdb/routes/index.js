@@ -18,7 +18,7 @@ var connection = mysql.createConnection({
 /* GET home page. */
 router.get('/', function(req, res, next) {
 
-    connection.query('SELECT * FROM user ORDER BY u_id desc LIMIT 10', function (error, result, fields) {
+    connection.query('SELECT * FROM user WHERE u_post="true" ORDER BY u_id desc LIMIT 10', function (error, result, fields) {
       if (error) {
           throw error;
       } else {
@@ -114,7 +114,7 @@ router.get('/pressure', function(req, res, next) {
   });
 router.get('/testimonials', function(req, res, next) {
 
-  connection.query('SELECT * FROM user', function (error, result, fields) {
+  connection.query('SELECT * FROM user WHERE u_post ="true"', function (error, result, fields) {
     if (error) {
         throw error;
     } else {
@@ -159,7 +159,7 @@ router.post('/send',(req, res) => {
     var mailOptions = {
     from: 'summitqueryform@gmail.com',
     to: 'nivedasteam@gmail.com',/*<----------- ALEX'S EMAIL */
-    subject:'Subject: ' +req.body.title,
+    subject:'Subject: Email request:' +req.body.title,
     text: 'Hello ! an username "'+req.body.username +'" has left a feedback on your website saying: "'+req.body.myfield +'" Contact user with email: '+req.body.email
     };
 
@@ -180,7 +180,8 @@ router.post('/sendtestimonial',(req, res) => {
       u_name: req.body.testiusername,
       u_rating: req.body.rating,
       u_comment: req.body.myfield,
-      u_service: req.body.service
+      u_service: req.body.service,
+      u_post: 'false'
     };
 
     connection.query('INSERT INTO user SET ?', post, function (error, result) {
@@ -188,16 +189,51 @@ router.post('/sendtestimonial',(req, res) => {
           throw error;
           res.redirect('/contact')
       } else {
-          console.log('-----TESTIMONIAL SENT------'+ post);
-            res.redirect('/submissionForm');
-      }
+          console.log(post)
+          console.log(result)
 
-    });
+            var userID = result.insertId
+
+            var transporter = nodemailer.createTransport({
+              service: 'gmail',
+              auth: {
+                user: 'summitqueryform@gmail.com',
+                pass: 'summittest123'
+              }
+            });
+
+            var mail = {
+              from: 'summitqueryform@gmail.com',
+              to: 'nivedasteam@gmail.com',/*<----------- ALEX'S EMAIL */
+              subject:'Subject: Testimonial insert Request',
+              html: 'Hello ! an username <b>"'+post.u_name+'"</b> has left a feedback on your website saying: <b>"'+post.u_comment+'</b> " Rating: <b>'+post.u_rating+'</b> Stars For <b>'+post.u_service+'</b> Service. If you wish to accept it, click on link: '+ 'http://localhost:8080/submissionForm'+userID
+            };
+
+            transporter.sendMail(mail,(error, info) => {
+              if (error) {
+                throw error;
+              }
+              console.log('message sent..'+info)
+              res.redirect('/submissionForm');
+            });
+
+            router.post('http://localhost:8080/submissionForm'+userID, function(req, res, next) {
 
 
-    });
+              connection.query('UPDATE user SET u_post ="true" WHERE u_id = userID', function (error, result, fields) {
+                if (error) {
+                  throw error;
+                } else {
+                  console.log('-------feedback inserted----------')
+                  res.redirect('/submissionForm');
+                  }
+                });
+              });
+            }
+          });
+        });
+      });
 
-});
 router.get('/submissionForm', function(req, res, next) {
 
   res.render('submissionForm', {
