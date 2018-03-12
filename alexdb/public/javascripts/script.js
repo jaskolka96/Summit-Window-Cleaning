@@ -17,26 +17,30 @@ setInterval(function(){CharacterCount('myfield2','CharCountLabel2')},55);
 function checkInput() {
 	let checkRating = window.selectRating.value
 	let checkService = window.selectService.value
+	let checkMessage = window.myfield2.value
+	let checkUser = window.testimonialUsernameField.value
 
 	if (checkRating == "") {
-		alert('Please enter the rating.')
-		document.getElementById("submitQuery").disabled=true;
-		return false;
+		alert('Please select the rating.')
 	}
-	if (checkService == "") {
+
+	else if (checkService == "") {
 		alert('Please select service.')
-		return false;
 	}
 
+	else if (checkMessage == ""){
+		alert('please insert a comment.')
+	}
+	else if (checkUser == ""){
+		alert('please insert your username.')
+	}
+
+	else{
+		console.log('sent')
+	}
 }
-
-let submitButton = window.submitQuery
-
 
 window.addEventListener('load', ()=>{
-	submitButton.addEventListener('click',checkInput)
+window.submitTestmonial.addEventListener('click',checkInput)
+console.log('checkInput')
 })
-
-
-
-}
