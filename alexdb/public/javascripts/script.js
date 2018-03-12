@@ -17,9 +17,10 @@ setInterval(function(){CharacterCount('myfield2','CharCountLabel2')},55);
 function checkInput() {
 	let checkRating = window.selectRating.value
 	let checkService = window.selectService.value
-	
+
 	if (checkRating == "") {
 		alert('Please enter the rating.')
+		document.getElementById("submitQuery").disabled=true;
 		return false;
 	}
 	if (checkService == "") {
@@ -31,6 +32,11 @@ function checkInput() {
 
 let submitButton = window.submitQuery
 
+
 window.addEventListener('load', ()=>{
 	submitButton.addEventListener('click',checkInput)
 })
+
+
+
+}

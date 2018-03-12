@@ -4,14 +4,10 @@
 <!--STYLESHEETS-->
 <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 	<title></title>
 </head>
 <body>
-	<!--JAVASCRIPT STYLE-->
-	  <script type="text/javascript" src="javascripts/script.js"></script>
+
 <!--LOGO -->
 <div id="logo">
 	<img src ="images/logo.png" alt="window, fascia, pressure, Gutter, cleaning, services">
@@ -57,39 +53,59 @@
 	  </ul>
 	</nav>
 	<main id="home-wrapper">
-<div id='banner'>
-	<img src='images/testimonial1.jpg'alt="window, fascia, pressure, Gutter, cleaning, services">
-</div>
+<div id='testimonial-content'>
+
 <div class='headbar-testimonial-main'>
 	<h1>TESTIMONIALS</h1>
 </div>
+<div id='banner'>
+	<img src='images/testimonial1.jpg'alt="window, fascia, pressure, Gutter, cleaning, services">
+</div>
 
-	<select id='sortBy'>
-		<option value ='0'>Sort by:</option>
-		<option value ='1'>The rating</option>
-		<option value ='2'>The service</option>
-		<option value ='3'>The username</option>
-	</select>
+<div id='testimonial-index'>
 
 	<% for(var i=0; i< object.length; i++) {%>
+
 		<div id='user-testimonial'>
-<div class='headbar-user'>
-	<h1>Written by: <b><u><%=object[i].u_name %></b></u><h1>
-</div>
-				<h2>Service used: "<%=object[i].u_service%>"</h2><h2>Rating: <%=object[i].u_rating %></h2>
-				<% for(var s=0; s< object[i].u_rating; s++) {%>
-					<img src='images/star.png' style='width:25px; height:25px;'>
+			<div class='headbar-user'>
+				<img src='images/user.png' class='user'><h1><b><%=object[i].u_name %></b>
+			</div>
+
+			<% if(i % 2!=0){%>
+				<div id='user-testominalbg1'>
+					<% }
+					else {%>
+						<div id='user-testominalbg2'>
+						<% }%>
+
+
+
+
+	<div id='star-img'>
+		<h1></h1>
+<% for(var s=0; s< object[i].u_rating; s++) {%>
+
+	<img src='images/star2.png' style='width:25px; height:25px;'>
+
+
 						<% } %>
-	<h3>"<i><small><%=object[i].u_comment %>"</h3></i></small>
+</div>
 
+<h3>"<%=object[i].u_comment %>"</h3>
 
 </div>
-<% for(var s=0; s< object.u_id; s++) {%>
-	<h2><%object[s].u_service %></h2>
-		<% } %><% }%>
+<img src='images/service-icon.png' class='service-img'><h2><%=object[i].u_service%></h2>
+</div>
 
+
+
+<% }%>
+
+</div>
 <button class="button">Load More..</button>
+</div>
 
+</div>
 	</main>
 
 	<!--FOOTER-->
@@ -133,6 +149,7 @@
 
 	</section>
 	</footer>
-
+	<!--JAVASCRIPT STYLE-->
+	  <script type="text/javascript" src="javascripts/script.js"></script>
 	</body>
 	</html>
