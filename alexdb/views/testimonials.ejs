@@ -64,9 +64,6 @@
 	<% for(var i=0; i< object.length; i++) {%>
 
 		<div id='user-testimonial'>
-			<div class='headbar-user'>
-				<img src='images/user.png' class='user'><h1><b><%=object[i].u_name %></b>
-			</div>
 
 			<% if(i % 2!=0){%>
 				<div id='user-testominalbg1'>
@@ -76,13 +73,13 @@
 						<% }%>
 
 
-
+<img src='images/user.png' class='username'><h1><b><%=object[i].u_name %></b></h1>
 
 	<div id='star-img'>
-<h1>+ <%=object[i].u_rating %> </h1>
+<!-- <h1>+ <%=object[i].u_rating %> </h1> -->
 <% for(var s=0; s< object[i].u_rating; s++) {%>
 
-	<img src='images/star.png' style='width:25px; height:25px;'>
+	<img src='images/star2.png' style='width:25px; height:25px;'>
 
 
 						<% } %>
@@ -92,7 +89,7 @@
 
 </div>
 
-<img src='images/service-icon.png' class='service-img'><h2><%=object[i].u_service%></h2>
+<img src='images/service-icon2.png' class='service-img'><h2><%=object[i].u_service%> +<%=object[i].u_rating%></h2>
 </div>
 
 

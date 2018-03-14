@@ -145,16 +145,16 @@
 
 
 		   						<img src='images/user.png' class='user'><b>
-									<h3><%=object[i].u_name %></h3><h1> </b><h4>Left a comment: </h4>
+									<h3><%=object[i].u_name %></h3><h1> </b><h4>Left a comment:</h4>
 
-											<h1><% if(object[i].u_comment.length>= 30){%>
+											<h1><% if(object[i].u_comment.length>= 68){%>
 
-												<small>" <%=object[i].u_comment.substring(0,70)%></small>...<a href='/testimonials'><u>more</u></a>"
+												<small><b>"</b><%=object[i].u_comment.substring(0,70)%></small>...<a href='/testimonials'><u>more</u></a>"
 
 											<% }
 											 else {%>
 
-												<small><%=object[i].u_comment%> " </small>
+												<small><b>"</b><%=object[i].u_comment%> <b>"</b> </small>
 
 											<% }%>
 

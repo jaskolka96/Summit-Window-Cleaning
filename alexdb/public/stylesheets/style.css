@@ -12,7 +12,7 @@ body {
 /* ---------------------phone-------------------- */
 
 #reach{
-    background-color: rgba(32, 32, 32, 0.80);
+    background-color: rgba(32, 32, 32, 0.90);
     display:inline-flex;
     align-items: right;
     width: 20%;
@@ -132,7 +132,7 @@ nav #menu {
   justify-content:flex-start;
   align-items: center;
   list-style-type: none;
-  background-color: rgba(32, 32, 32, 0.80);
+  background-color: rgba(32, 32, 32, 0.90);
   border-bottom: 0.8vh solid black;
   border-bottom-color: #159957;
   border-top: 3px solid black;
@@ -153,7 +153,7 @@ nav #menu {
 /* ---------------------Search box--------------------- */
 input[type=text] {
     width: 180%;
-    background-color: rgba(32, 32, 32, 0.80);
+    background-color: rgba(32, 32, 32, 0.95);
     border-radius: 6px;
     position:relative;
     border-style:groove;
@@ -252,7 +252,7 @@ input[type=text]:focus{
   font-size: 1.2rem;
   text-align: center;
   text-decoration: none;
-  background-color: rgba(32, 32, 32, 0.90);
+  background-color: rgba(32, 32, 32, 0.95);
   padding-top: 10px;
   height: 40%;
   border-bottom-left-radius: 6px;
@@ -268,9 +268,12 @@ input[type=text]:focus{
 
 #picture-container{
   background: #159957;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-right: 5px solid red;
+  border-right-color: rgba(32, 32, 32, 0.95);
+  border-top: 5px solid red;
+  border-top-color: rgba(32, 32, 32, 0.95);
 }
 
 .item:hover{
@@ -285,6 +288,7 @@ input[type=text]:focus{
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   border-right: 2px solid #159957;
+  border-top: 2px solid #159957;
   border-bottom: none;
 }
 
@@ -309,7 +313,7 @@ input[type=text]:focus{
   border-color: #2f3036;
   border-bottom-color: #159957;
   border-radius: 4px;
-  background-color: rgba(32, 32, 32, 0.90);
+  background-color: rgba(32, 32, 32, 0.95);
 }
 
 .home-content:hover{
@@ -376,14 +380,21 @@ img.user{
   height: 3%;
   padding-left: 5px;
 }
-
+img.username{
+  padding-top: 1vh;
+  width: 80px;
+  height: 80px;
+  display:block;
+  flex-direction: row;
+  margin-left: auto;
+  margin-right: auto;
+}
 img.star{
   width:1.1%;
   height: 1.1%;
 }
 
 #home-testominal h1{
-
   color:white;
   font-weight: bold;
   font-size: 17px;
@@ -440,11 +451,11 @@ img.star{
   border-top: 1px solid #1a79ff;
   width:100%;
   height: 5%;
-  background-color: rgba(32, 32, 32, 0.85);
+  background-color: rgba(32, 32, 32, 0.94);
 }
 .background2{
   border-top: 1px solid #1a79ff;
-  background-color: rgba(32, 32, 32, 0.95);
+  background-color: rgba(32, 32, 32, 0.99);
 }
 .background1:hover, .background2:hover{
   background-color: rgba(32, 32, 32, 1);
@@ -548,7 +559,7 @@ footer {
   position: fixed;
   right: 13%;
   top: 35%;
-  background-color:rgba(32, 32, 32, 0.80);
+  background-color:rgba(32, 32, 32, 0.90);
   display:flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -632,7 +643,7 @@ footer {
   border-color: #2f3036;
   color:white;
   margin-top: 1em;
-  background-color:rgba(32, 32, 32, 0.90);
+  background-color:rgba(32, 32, 32, 0.98);
   border-radius: 4px;
   display: flex;
   flex-direction: row;
@@ -704,7 +715,7 @@ footer {
 #cleaning-gallery{
   width: 100%;
   height: 50%;
-  background-color:rgba(32, 32, 32, 0.90);
+  background-color:rgba(32, 32, 32, 0.98);
   margin-top: 5vh;
   margin-bottom: 20vh;
   display: flex;
@@ -866,28 +877,34 @@ footer {
   overflow-y: hidden;
   overflow-x:hidden;
   border-radius: 5px;
-  background-color:rgba(32, 32, 32, 0.90);
+  background-color:rgba(32, 32, 32, 0.97);
 }
 #banner{
-  height: 10%;
+  height: 11%;
   width: 100%;
   border-radius: 4px;
   margin-left: auto;
   margin-right: auto;
   border: 4px solid #2f3036;
-
+  justify-content: center;
+  background-color:rgba(32, 32, 32, 0.97);
 }
 #banner img{
-  width: 100%;
-  height: 100%;
+  display: flex;
+  margin: auto;
+  margin-top: 7px;
+  width: 98%;
+  height: 95%;
+  border-radius: 5px;
+
 }
 
 .service-img{
-  width: 35px;
-  height: 32px;
+  width: 40px;
+  height: 36px;
   position: absolute;
-  margin-left: 5px;
-  margin-top: 6px;
+  margin-left: 10px;
+  margin-top: 2px;
 }
 #user-testimonial{
   height: 12%;
@@ -899,18 +916,17 @@ footer {
   border-radius: 2px;
   align-self:center;
   justify-content: center;
-  margin-top: 2vh;
-  margin-bottom: 10vh;
+  margin-top: 4vh;
+  margin-bottom: 6vh;
   margin-left: 1vw;
   margin-right: 1vw;
 }
+
 #user-testominalbg1{
   margin-top: 0;
   width: 100%;
   height: 100%;
-  border: 3px solid;
-  border-color: #159957;
-  background-color: #454849;
+  background-color: #1e7ddb;
   background-size:contain;
   background-repeat: no-repeat;
 }
@@ -919,35 +935,45 @@ footer {
   margin-top: 0;
   width: 100%;
   height: 100%;
-  border: 3px solid;
-  border-color: #155799;
-  background-color: #454849;
+  background-color: #159957;
   background-size:cover;
-
 }
+
+#user-testominalbg1 h1{
+  color:white;
+  padding-top: 1vh;
+  text-align: center;
+  font-size: 1.5rem;
+  font-family: sans-serif;
+}
+
+#user-testominalbg2 h1{
+  color:white;
+  padding-top: 1vh;
+  text-align: center;
+  font-size: 1.5rem;
+  font-family: sans-serif;
+}
+
 #user-testimonial h2{
   color: white;
   text-align: center;
   font-family:sans-serif;
-  margin-top: 0.5vh;
-  padding-top: 7px;
+  padding-top: 12px;
   font-size: 15px;
   padding-bottom: 7px;
   font-weight: bold;
   background: #454849;
   width: 100%;
   height: 16%;
-
 }
 #user-testimonial h3{
   color: white;
   font-style: italic;
   margin-left: auto;
   margin-right: auto;
-  text-align: center;
   font-family:sans-serif;
-  padding-top: 7px;
-  font-size: 15px;
+  font-size: 16px;
   padding: 1em;
   height: 53%;
   width: 100%;
@@ -958,18 +984,11 @@ footer {
 #star-img{
   align-self: center;
   display: table;
-  justify-content: flex-end;
   margin-left: auto;
   margin-right: auto;
-  flex-direction: row-reverse;
-  background: none;
-  margin-top: 1vh;
-  padding-left: 5px;
-  padding-right: 5px;
-  padding-bottom: 2px;
-  border-top: none;
 }
 #star-img h1{
+  margin-top: 1vh;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
@@ -978,23 +997,9 @@ footer {
   font-weight: bold;
 }
 
-.headbar-user{
-  background: #454849;
-  width: 100%;
-  height: 15%;
-  position: relative;
-  font-size: 10px;
-  margin-bottom:0.5vh;
-}
-.headbar-user img{
-  width:40px;
-  height: 30px;
-  position:absolute;
-  margin-left: 0px;
-  margin-top: 0px;
-}
 #user-testominalbg1:hover,#user-testominalbg2:hover {
   -webkit-filter: brightness(80%);
+
 }
 
 .headbar-testimonial-main h1{
@@ -1113,7 +1118,7 @@ h3{
   border-color: #2f3036;
   color:white;
   margin-top: 1em;
-  background-color:rgba(32, 32, 32, 0.90);
+  background-color:rgba(32, 32, 32, 0.97);
   border-radius: 4px;
 }
 
@@ -1191,7 +1196,7 @@ h3{
   border: 2px solid;
   border-color: #2f3036;
   color:white;
-  background-color:rgba(32, 32, 32, 0.90);
+  background-color:rgba(32, 32, 32, 0.97);
   margin-top: 1em;
   border-radius: 4px;
   margin-bottom: 8em;
@@ -1290,7 +1295,6 @@ h3{
   border-color: #2f3036;
   color:white;
   margin-top: 5em;
-  background-color:rgba(32, 32, 32, 0.90);
   margin-bottom: 45vh;
 }
 .Submit-form-headbar{
