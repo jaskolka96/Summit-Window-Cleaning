@@ -4,10 +4,7 @@
 <!--STYLESHEETS-->
 <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-	<title></title> -->
+	<title></title>
 </head>
 <body>
 	<!--JAVASCRIPT STYLE-->
@@ -57,6 +54,8 @@
 	  </ul>
 	</nav>
 		<main id="home-wrapper">
+
+
 <!--LEFT WRAPPER!--------------------->
 
 <div id='cleaning-description'>
@@ -65,16 +64,19 @@
 </div>
 <div id='cleaning-left-container'>
 <h3>Service Description</h3>
-<p> extsample extsample<br> extsample extsample extsample extsample extsample extsample extsample extsample extsample<br> extsample<br>extsample extsample extsample<br> extsample extsample extsample extsample extsample extsample textsampletextsample textsample textsample text</p>
-
-<h5>Service <b>PRICE</b> starts from: <b>£20</b></h5>
+<p> Pressure Washing is an important part of regular exterior property maintenance. It will help to keep all the surfaces of your home or business looking great as well as protecting your investment.</p>
+<p>Our goals are simple, we strive to leave your world cleaner than we found it while providing excellent customer service. Whether you need your windows cleaned, your entire house washed, landscaping and/or maintenance, we are the company that will get it done right.</p>
+<p>Pressure cleaning also can get rid of harmful mold that can cause further damage to your property and also trigger allergic reactions in many people. If you have family members with mold allergies you may find a great improvement in energy and less reaction by having your home exterior power washed.</p>
+<h5>This service <b>PRICE</b> starts from: <b>£21</b></h5>
 </div>
 
 <div id='cleaning-right-container'>
-<h4>Additional Information</h4>
-<p> extsample extsample<br> extsample extsample extsample extsample extsample extsample extsample extsample extsample<br> extsample<br>extsample extsample extsample<br> extsample extsample extsample extsample extsample extsample textsampletextsample textsample textsample text</p>
+<h3>Additional Information</h3>
+<p><b>Low Pressure Washing - </b>Summit services can adapt its pressure washing to your needs. This is to make sure that nothing that is cleaned can be damaged. Therefore, choosing our service provides a safe way to clean your components.</p>
+<p><b>High Pressure Washing - </b>In case there is a need for higher pressure washing, for example when the dirt is super resistant, we may do so. This is because our trained staff will know how strong cleaning surface is which allows to adapt to every situation!</p>
+<p><b>Window Cleaning - </b>Our company can also provide window cleaning using pressure washing. This is 100% safe as the trained staff can control on how strong the pressure is leaving your windows in best state! </p>
 <% for(var i=0; i< object.length; i++) {%>
-<h2>Average Rating: <b><%=object[i].avgPressure%></b> out of 5 stars!</h2>
+<h2>Service Average Rating: <b><%=object[i].avgPressure%></b> out of 5.</h2>
 <% } %>
 </div>
 <br>
