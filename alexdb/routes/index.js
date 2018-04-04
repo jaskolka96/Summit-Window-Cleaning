@@ -141,25 +141,26 @@ router.get('/pressure', function(req, res, next) {
       }
     });
   });
+
 router.get('/testimonials', function(req, res, next) {
 
-  connection.query('SELECT * FROM user WHERE u_post ="true"', function (error, result, fields) {
+  let listSize = req.query.listSize
+  console.log("QUERY SIZE:"+listSize)
+  console.log(query.sql)
+
+  connection.query('SELECT * FROM user WHERE u_post ="true" LIMIT ?'[listSize], function (error, result, fields) {
     if (error) {
         throw error;
     } else {
         console.log('MySQL TESTIMONIAL Query result: ',result)
 
-
-
             res.render('testimonials', {
                       object: result
                   });
-
-
-
     }
   });
 });
+
 router.get('/charity', function(req, res, next) {
 
   res.render('charity', {

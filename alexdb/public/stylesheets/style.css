@@ -12,7 +12,7 @@ body {
 /* ---------------------phone-------------------- */
 
 #reach{
-    background-color: rgba(32, 32, 32, 0.90);
+    background-color: rgba(32, 32, 32, 0.80);
     display:inline-flex;
     align-items: right;
     width: 20%;
@@ -185,8 +185,8 @@ input[type=text]:focus{
 /* ---------------------Slideshow--------------------- */
 #slider{
   margin-top: 1vh;
-  height: 28%;
-  width: 99%;
+  height: 25%;
+  width: 98%;
   overflow:hidden;
   border: 6px solid;
   border-color: rgba(0, 0, 0, 0.7);
@@ -202,7 +202,7 @@ input[type=text]:focus{
   left:0;
   text-align: center;
   font-size: 1em;
-  animation: 20s slider infinite;
+  animation: 30s slider infinite;
 }
 
 #slider figure img{
@@ -211,9 +211,39 @@ input[type=text]:focus{
   float:left;
 }
 @keyframes slider {
-  0% {left: 0;} 20% {left: 0;} 25% {left:-100%;} 45% {left:-100%;}
-  50% {left:-200%;} 70% {left:-200%;} 75% {left: -300%;}
-  95% {left: -300%;} 100% {left:-400%;}
+0%{
+  left: 0;
+}
+10%{
+  left: 0;
+}
+20%{
+  left: -100%;
+}
+30%{
+  left: -100%;
+}
+40%{
+  left: -200%;
+}
+50%{
+  left: -200%;
+}
+60%{
+  left: -300%;
+}
+70%{
+  left: -300%;
+}
+80%{
+  left: -400%;
+}
+90%{
+  left: -400%;
+}
+100%{
+  left: 0;
+}
 }
 
 /* ---------------------Main wrap--------------------- */
@@ -226,14 +256,15 @@ input[type=text]:focus{
   justify-content: space-around;
   flex-wrap: wrap;
   align-self: center;
-  margin-bottom: 1vh;
+  margin-bottom: 6vh;
 }
 
 /* ---------------------Picture boxes--------------------- */
 .item {
     width: 23%;
     height: 10%;
-    margin-bottom: 4em;
+    margin-top: -3vh;
+    margin-bottom: 1em;
     border-color: #159957;
     border-color: -webkit-linear-gradient(to bottom, #155799, #159957);
     border-color: linear-gradient(to bottom, #155799, #159957);
@@ -306,7 +337,7 @@ input[type=text]:focus{
 .home-content{
   width: 32%;
   height: 21%;
-  margin-top: -11vh;
+  margin-top: -12vh;
   align-self: center;
   border: 2px solid;
   border-color: #2f3036;
@@ -347,15 +378,12 @@ input[type=text]:focus{
 }
 /* ---------------------Testimonial Table--------------------- */
 #home-testominal {
-  margin-top: -5vh;
-  height: 18%;
+  height: 25%;
   width: 98%;
   border-bottom: none;
-  overflow-y:scroll;
   align-self: center;
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;
-  border-left: 3px solid #1a79ff;
 }
 
 
@@ -368,15 +396,13 @@ input[type=text]:focus{
   background: -webkit-linear-gradient(to bottom, #155799, #159957);
   background: linear-gradient(to bottom, #155799, #159957);
   width: 100%;
-  height: 21%;
+  height: 15%;
   border: 2px solid #2f3036;
   border-bottom: none;
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
   font-size: 1.5rem;
 }
-
-
 
 img.user{
   width: 3%;
@@ -400,8 +426,7 @@ img.star{
 #home-testominal h1{
   color:white;
   font-weight: bold;
-  font-size: 17px;
-
+  font-size: 15px;
 }
 #home-testominal h2{
   color:white;
@@ -411,7 +436,9 @@ img.star{
   text-align: center;
   padding-top: 5px;
 }
-
+#extract-testimonial small{
+  color:#159957;
+}
 #extract-testimonial h3{
   width: 10%;
   display: inline-flex;
@@ -434,14 +461,22 @@ img.star{
   font-size: 15px;
   text-align: right;
 }
+#extract-testimonial h6{
+  display: inline-flex;
+  font-size: 15px;
+  font-weight: bold;
+  color:white;
+  padding-left: 25px;
+}
+
 
 #extract-testimonial h1{
   color:white;
   font-weight: normal;
   display: inline;
 }
-#extract-testimonial b, #extract-testimonial u{
-  color:#159957;
+#extract-testimonial b{
+
 }
 
 #extract-testimonial a{
@@ -485,11 +520,11 @@ footer {
 #top-footer{
   position: relative;
   right: 0%;
-  top:7%;
+  top:6%;
   font-size: 14px;
   padding-bottom: 10px;
   width: 100%;
-  height: 70%;
+  height: 76%;
 }
 
 #top-footer h1{
@@ -562,7 +597,7 @@ footer {
   position: fixed;
   right: 13%;
   top: 35%;
-  background-color:rgba(32, 32, 32, 0.90);
+  background-color:rgba(32, 32, 32, 0.80);
   display:flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -870,13 +905,7 @@ footer {
   margin-bottom: 20vh;
   border-radius: 6px;
 }
-#charity-content{
-  margin-top: 2vh;
-  height: 100%;
-  width: 100%;
-  margin-bottom: 20vh;
-  border-radius: 6px;
-}
+
 #testimonial-index{
   width:100%;
   height: 70%;
@@ -1007,7 +1036,6 @@ footer {
 
 #user-testominalbg1:hover,#user-testominalbg2:hover {
   -webkit-filter: brightness(80%);
-
 }
 
 .headbar-testimonial-main h1{
@@ -1019,7 +1047,7 @@ footer {
  font-weight: bold;
 }
 
-.button{
+#loadMoreBttn{
   background: #159957;
   background: -webkit-linear-gradient(to bottom, #155799, #159957);
   background: linear-gradient(to bottom, #155799, #159957);
@@ -1057,7 +1085,8 @@ h3{
   font-family:sans-serif;
   font-weight:bold;
   padding-top: 7px;
-  margin-left: 4px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 #sortBy{
@@ -1066,16 +1095,20 @@ h3{
   height: 2%;
   width: 10%;
 }
-/* ---------------------Testimonials page--------------------- */
+/* ---------------------Charity page--------------------- */
 #charity-content{
-  margin-top: 2vh;
-  height: 100%;
+  margin-top: 3vh;
+  margin-left: auto;
+  margin-right: auto;
+  height: 500%;
   width: 100%;
   margin-bottom: 20vh;
   border-radius: 6px;
+  background-color: rgba(32, 32, 32, 0.97);
 }
 #charity-banner{
-  height: 58.5%;
+  margin-top: 2vh;
+  height: 41%;
   width: 100%;
   border-radius: 4px;
   margin-left: auto;
@@ -1084,6 +1117,7 @@ h3{
   justify-content: center;
   background-color:rgba(32, 32, 32, 0.97);
 }
+
 #charity-banner img{
   display: flex;
   margin: auto;
@@ -1091,6 +1125,15 @@ h3{
   width: 98%;
   height: 95%;
   border-radius: 5px;
+}
+.selectedCharity{
+  width:95%;
+  height: 2%;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+  background: red;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 

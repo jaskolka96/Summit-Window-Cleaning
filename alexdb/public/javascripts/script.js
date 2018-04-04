@@ -44,3 +44,12 @@ window.addEventListener('load', ()=>{
 window.submitTestmonial.addEventListener('click',checkInput)
 console.log('checkInput')
 })
+
+
+function listMoreTestimonials(){
+	let listSize = 20
+	window.location.replace('/testimonials?listSize='+listSize)
+
+}
+
+window.loadMoreBttn.addEventListener('click',listMoreTestimonials)
