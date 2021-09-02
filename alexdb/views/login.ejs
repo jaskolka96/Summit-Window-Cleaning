@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
 <head>
 <!--STYLESHEETS-->
 <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<title>Summit Service Charity</title>
+	<title>Summit Service login</title>
 </head>
 <body>
 
@@ -15,28 +15,9 @@
 </div>
 <!--CONTACT INFO -->
 <div id='reach'>
-	<h1><img src='images/phone.png' alt= 'phone,cleaning'>+00000000000</h1>
-	<h1><img src='images/email.png' alt= 'email,cleaning'>SampleEmail@gmail.com</h1>
+		 <h1><img src='images/phone.png' alt= 'phone,cleaning'>+00000000000</h1>
+		 <h1><img src='images/email.png' alt= 'email,cleaning'>SampleEmail@gmail.com</h1>
 	 </div>
-<!--Social Media Links (Right of the page)-->
-<div class="social-media-box">
-<h2>twitter</h2>
-<a href='https://twitter.com/'>
-	<img src='images/medialogo1.png' alt="window, fascia, pressure, Gutter, cleaning, services">
-		</a>
-<h2>instagram</h2>
-<a href='https://instagram.com/'>
-	<img src='images/medialogo2.png' alt="window, fascia, pressure, Gutter, cleaning, services">
-		</a>
-<h2>facebook</h2>
-<a href='https://www.facebook.com/Summit-Window-Cleaning-417375188721751/'>
-	<img src='images/medialogo3.png' alt="window, fascia, pressure, Gutter, cleaning, services">
-		</a>
-<h2>google+</h2>
-		<a href='https://plus.google.com/'>
-			<img src='images/medialogo4.png' alt="window, fascia, pressure, Gutter, cleaning, services">
-				</a>
-</div>
 <!--NAVIGATION BAR -->
 	<nav>
 		<ul id="menu">
@@ -46,48 +27,33 @@
 	    <li class="fascia"><a href="/fascia">Fascia </a></li>
 	    <li class="pressure"><a href="/pressure">Pressure </a></li>
 	    <li class="testimonials"><a href="/testimonials">Testimonials</a></li>
-	    <li class="charity" id="charity"><a href="/charity">Charity</a></li>
-	    <li class="contact"><a href="/contact">Contact</a></li>
+	    <li class="charity"><a href="/charity">Charity</a></li>
+	    <li class="contact" id="contact"><a href="/contact">Contact</a></li>
 			<!--searchbox-->
 				<gcse:search></gcse:search>
 
 </ul>
 	</nav>
-
+<!--LEFT WRAPPER!--------------------->
 	<main id="home-wrapper">
-<div id='charity-content'>
 
-	<div id='charity-banner'>
-		<img src='images/charity1.jpg' alt="window, fascia, pressure, Gutter, cleaning, services">
-	</div>
+<div id='Submit-form'>
+		<div class='Submit-form-headbar'>
+			<h1>Login into account</h1>
+		</div>
+		<br>
 
-<div id='charity-index'>
-<div id='charity-index-header'>
-	<h1>MOST POPULAR CHARITIES</h1>
-</div>
+				<input type ='textinput' name='login' placeholder="Your Username:" id='loginField' class='login' maxlength="12" required>
+				<input type ='password' name='password' placeholder="Your Password:" id='PasswordField' class='password' maxlength="12" required>
+				<br>
+					<button class="loginBttn" id='loginBttn'> LOGIN</button>
+					<div id='error' class='hidden'>
+					<h3> Invalid Account details. </h3>
 
-		<% for(var i=0; i< object.length; i++) {%>
-			<div class='charityList'>
-
-				<h1><%=object[i].ch_name%></h1>
-
-			<img src='images/charityLogo.png' alt="window, fascia, pressure, Gutter, cleaning, services">
-			<div id='charityDesc'>
-				<p><%=object[i].ch_desc%></p>
-			</div>
-
-			<a href= "<%=object[i].ch_link%>"><button class="redirectBttn" id='redirectBttn'>See Charity Website</button></a>
-			<button class="chBttn" id='<%=object[i].ch_id%>'>Vote for this Charity</button>
-
-			<h2>Total Vote Count:<br><b><%=object[i].ch_count%></b></h2>
-			</div>
-			<% } %>
 
 
 </div>
-</div>
-	</main>
-
+</main>
 <!--FOOTER-->
 	<footer>
 
@@ -129,7 +95,6 @@
 						<p>@copyright All rights reserved to up775005 - Final Year Project (PJE40) - Summit Window Cleaning</p>
 							</div>
 						</div>
-
 </section>
 </footer>
 <!--JAVASCRIPT STYLE-->
